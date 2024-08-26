@@ -1,0 +1,202 @@
+.reviewsContainer{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(90deg, #292929 0%, #3C3C3C 100%);
+    box-shadow: 0px 0px 60px 0px #06060C80;
+    color: #FFFFFF;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+
+    .reviewsTitle{
+        margin: 0; 
+        padding: 0;        
+        padding-bottom: 40px;
+        font-size: var(--text-xl);
+        font-weight: 700;
+        text-align: center;
+    }
+
+}
+
+.sliderContainer{
+    height: 221px;  
+    position: relative;
+    overflow-x: clip;
+    max-width: 100vw;
+    
+    
+    .slider {
+        width: 100vw;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        height: 221px;            
+        padding: 0 var(--padding-x);             
+        display: flex;
+        gap: 1rem;
+        color: #BDBDBD;
+        align-items: stretch;
+        justify-content: center;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        
+
+        .oppo{
+            position: absolute;
+            top: -100px;
+            left: 0;
+            z-index: 5;
+        }
+
+        .infoBackground{
+            position: absolute;
+            top:-186px;
+            left: 0;
+            z-index: 7;
+        }
+    }
+}
+
+.sliderCard{
+    background: #1E1E1E;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: clamp(15.625rem, 13.75rem + 9.375vw, 23.125rem);
+    height: clamp(11.625rem, 11.0781rem + 2.7344vw, 13.8125rem);
+
+    .profileInfo{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .avatarContainer{
+            background: #292929;
+            border-radius: 9999px;
+            width:  clamp(2.5rem, 2.2656rem + 1.1719vw, 3.4375rem);
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                width: clamp(1.375rem, 1.25rem + 0.625vw, 1.875rem);
+                aspect-ratio: 1/1;
+            }
+        }
+
+        p{
+            font-size: var( --text-sm);
+            font-weight: 700;
+        }        
+    }
+
+    .reviewText{
+        font-weight: 400;
+        font-size: var( --text-sm);
+        padding-top: 20px;
+    }
+}
+
+.buttonContainerMobile {
+    position: relative;
+    z-index: 30;
+    display: none;
+    height: 26px;
+    box-sizing: border-box;
+
+    .currentStep{
+        font-weight: 700;
+    }
+}
+
+.buttonContainer{
+    position: absolute;
+    z-index: 20;
+    top: calc(50% - 17px);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 clamp(0rem, -15.2222rem + 23.7847vw, 8.5625rem);;
+    
+    .button{
+        width: 49px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1E1E1E;
+        border-radius: 30px;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+    
+    .sliderContainer{
+        .slider{
+            width: auto;
+        }
+    }  
+}
+
+@media (max-width: 1024px) {
+    
+    .buttonContainerMobile {
+        width: fit-content;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        gap: 36px;
+        background: #1E1E1E;
+        padding: 3.5px 15px;
+        border-radius: 30px;
+        color: #FFFFFF;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .buttonContainer{
+        display: none;
+    }
+
+    
+      
+}
+
+@media (max-width: 480px) {
+    .reviewsContainer{
+        padding: 30px 0;
+    }
+
+    .sliderContainer{
+        .slider{
+            .oppo{
+                display: none;
+            }
+        }
+    } 
+
+    
+
+    .sliderCard{
+        padding: 15px;
+    
+        .profileInfo{
+            display: flex;
+            gap: 10px;
+            align-items: center;    
+        }
+    
+        .reviewText{
+            font-weight: 400;
+            font-size: var( --text-sm);
+            padding-top: 10px;
+        }
+    }
+}
+

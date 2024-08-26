@@ -1,0 +1,73 @@
+.card {    
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+    gap: 18px;
+    background: #1E1E1E;
+    box-shadow: 0px 0px 15px 0px #00000040;
+    border-radius: 15px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+    width: clamp(15.375rem, 15rem + 1.875vw, 16.875rem);
+    img{
+        padding: 0 30px;
+        max-height: 210px;
+    }
+
+    .step{
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        padding: 6px 8px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #BDBDBD;
+        border-radius: 10px;
+        background: #1E1E1E;
+
+        p{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin: 0;
+        height: 4.375rem;
+        padding: 0 30px;
+        padding-top: 25px;
+        background: #1E1E1E;
+        box-shadow: 0px 0px 15px 0px #0000004D;
+        font-size: var(--text-xs);
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+.card:first-child {
+    .step{
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        padding: 6px 8px;
+        font-size: 24px;
+        font-weight: 800;
+        border-radius: 10px;
+        background: #1E1E1E;
+
+        p{
+            text-wrap: wrap;
+            background-image: -webkit-linear-gradient(45deg,#00A550, #00FF7C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .title {
+        text-wrap: wrap;
+        background: -webkit-linear-gradient(45deg,#00A550, #00FF7C);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

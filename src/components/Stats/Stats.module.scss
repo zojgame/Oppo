@@ -1,0 +1,246 @@
+.statsSection{
+    display: flex;
+    flex-direction: column;
+    color: #BDBDBD;
+
+    .statsContainer{
+        display: flex;
+        align-items: center;
+        gap: 87px;
+        padding: clamp(1.875rem, 1.1875rem + 3.4375vw, 4.625rem) var(--padding-x);
+        background: linear-gradient(90deg, #292929 0%, #3C3C3C 100%);
+        width: 100%;
+        box-shadow: 0px 0px 100px 0px #00000073;
+        position: relative;
+        z-index: 10;
+
+        .statsDescription{
+            font-size: var(--text-xs);
+            font-weight: 400;
+            padding-left: 12px;
+            border-left-color: #BDBDBD;
+            border-left-width: 3px; 
+            border-left: solid;
+        }
+        .stats{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+    
+            .statsCircle{
+                width: clamp(8.125rem, 6.875rem + 6.25vw, 13.125rem);
+                height: clamp(8.125rem, 6.875rem + 6.25vw, 13.125rem);
+                background: linear-gradient(91.26deg, #00A550 0.62%, #00FF7C 99.49%);
+                box-shadow: 0px 0px 40px 0px #00FF7C66;
+                border-radius: 9999px;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+    
+                .innerCircle{
+                    width: clamp(6.625rem, 5.625rem + 5vw, 10.625rem);
+                    height: clamp(6.625rem, 5.625rem + 5vw, 10.625rem);
+                    background: #2A2A2A;
+                    border-radius: 9999px;
+                    box-shadow: 0px 0px 15px 0px #00000066;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+    
+                    p{
+                        font-size: var(--text-xl);
+                        font-weight: 700;
+                        text-align: center;
+                        background: -webkit-linear-gradient(45deg,#00A550, #00FF7C);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        text-shadow: 0 0 .5em #89DE3F40;
+    
+                    }
+                }
+    
+    
+            }
+    
+            .statsTitle{
+                font-weight: 700;
+                text-align: center;
+                font-size: clamp(0.75rem, 0.6563rem + 0.4688vw, 1.125rem);;
+            }
+        }
+    }
+
+    .brokenPhoneForm{
+        overflow: hidden;
+        position: relative;
+        padding: clamp(2.5rem, 1.5625rem + 4.6875vw, 6.25rem) 
+        clamp(1.25rem, -3.2969rem + 22.7344vw, 19.4375rem);;
+        background: linear-gradient(90deg, #292929 0%, #3C3C3C 100%);
+        color: white;
+        text-align: center;
+
+        h2{
+            font-size: clamp(1.25rem, 0.8438rem + 2.0313vw, 2.875rem);
+            font-weight: 700;
+            line-height: 62px;           
+        }
+
+        p{
+            font-size: var(--text-l);
+            padding: 0 clamp(0rem, -3.0313rem + 15.1562vw, 12.125rem);;
+            padding-top: 20px;
+            line-height: 32px;
+
+            span{
+                font-weight: 700;
+            }
+        }
+
+        .firstBackgroundImage{
+            position: absolute;
+            top: -85%;
+            left: 0;
+        }
+        .secondBackgroundImage{
+            position: absolute;
+            bottom: -300px;
+            left: 0;
+        }
+
+        .firstBackgroundImageMobile{
+            display: none;
+        }
+        .secondBackgroundImageMobile{
+            display: none;
+        }
+
+        .buttonsContainer{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding-top: 40px;
+            gap: 37px;
+            position: relative;
+            z-index: 10;
+
+            .callBackButton{
+                width: 100%;
+                grid-column: span;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1200px) {
+    .statsSection{        
+        .brokenPhoneForm{
+            .buttonsContainer{
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                .callBackButton{
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .statsSection{
+
+        .stats{
+            gap: 10px;
+        }
+    
+        .statsContainer{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .brokenPhoneForm {
+            .firstBackgroundImage{
+                position: absolute;
+                top: -300px;
+                left: 0;
+            }
+            .secondBackgroundImage{
+                bottom: -150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .statsSection{        
+        .brokenPhoneForm{
+            .buttonsContainer{
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                .callBackButton{
+                    grid-column: span 2;
+                }
+            }
+
+            .firstBackgroundImage{
+                top: -200px;
+            }
+            .secondBackgroundImage{
+                bottom: -100px;
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .statsSection{        
+        .brokenPhoneForm{
+            .buttonsContainer{
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                .callBackButton{
+                    grid-column: span 1;
+                }
+            }
+
+            h2{
+                line-height: 27.24px;           
+            }
+    
+            p{
+                padding-top: 10px;
+                line-height: 19.07px;
+            }
+
+            .firstBackgroundImage{
+                display: none;
+            }
+            .secondBackgroundImage{
+                display: none;
+            }
+
+            .firstBackgroundImageMobile{
+                display: block;
+                position: absolute;
+                top: -160px;
+                left: 0;
+            }
+            .secondBackgroundImageMobile{
+                display: block;
+                position: absolute;
+                bottom: -60px;
+                right: 0;
+            }
+        }
+    }
+}
+

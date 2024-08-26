@@ -1,0 +1,144 @@
+.repairPhoneContainer{
+    background: #353535;    
+    display: flex;
+    padding: 0 var(--padding-x);
+    padding-top: 21px;
+    padding-bottom: clamp(2.5rem, 1.5625rem + 4.6875vw, 6.25rem);
+   
+
+    .infoContainer{
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        h1{
+            text-wrap: nowrap;
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            padding-bottom: 1.25rem;
+        
+                span{
+                    color: #00a54f;
+                }
+        }
+
+        p{
+            margin: 0;
+            padding-bottom: 40px;
+            color: white;
+            font-size: var(--text-l);
+            line-height: 2rem;
+        }
+
+    }
+
+    .phoneContainer{
+        z-index: 10;
+        width: clamp(15.125rem, 9.6719rem + 27.2656vw, 36.9375rem);        
+        padding-bottom: 73px;
+
+        img{
+            width: 100%;
+        }
+    }   
+    
+}
+
+.advantages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    background: linear-gradient(90deg, #292929 0%, #3C3C3C 100%);
+    z-index: 100;
+    padding: 34px 0;
+    position: relative;
+    box-shadow: 0px 0px 60px 0px #06060C80;
+    
+    div{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: fit-content;
+
+        p {
+            font-size: var(--text-sm);
+            background: #BDBDBD;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        svg{
+
+            fill: #BDBDBD;
+        }
+
+    }
+    
+    div:first-child {
+        p {
+            background: -webkit-linear-gradient(45deg,#00A550, #00FF7C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;            
+        }
+
+        svg{
+            fill: url(#paint0_linear_125_2557);
+        }
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    .repairPhoneContainer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }    
+
+    
+}
+
+@media (max-width: 480px) {
+    .advantages{  
+        gap: 30px;   
+
+        div:first-child {
+            p {
+                background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;        
+            }
+            
+        }   
+    
+        div{
+            flex-direction: column;
+            gap: 30px;
+            svg{    
+                width: 57px;
+                height: 57px;
+                fill: url(#paint0_linear_125_2557);
+            }
+
+            p{
+                background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            }
+    
+        }   
+    
+        
+    }
+    .repairPhoneContainer{
+
+        .phoneContainer{
+            padding-top: 26px;
+            padding-bottom: 9px;
+        }
+    }
+}

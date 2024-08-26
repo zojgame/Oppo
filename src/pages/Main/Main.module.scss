@@ -1,0 +1,31 @@
+.repairPhoneBackgroundContainer{
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.infoSectionContainer{
+    position: relative;
+}
+
+.toTopButton{
+    position: fixed;
+    z-index: 50;
+    bottom: 25px;
+    left: 25px;
+}
+
+@media (max-width: 1040px) {
+    .rectangle {
+        display: none;
+    }
+    
+}

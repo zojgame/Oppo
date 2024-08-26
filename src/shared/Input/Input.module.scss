@@ -1,0 +1,24 @@
+.primary{
+    background: #1E1E1E;
+    border-radius: 30px;
+    width: 100%;
+    padding: 20px;
+
+    input{
+        width: 100%;
+        text-align: left;
+        color: white;
+    }
+}
+
+.secondary{
+    width: 100%;
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 8px;
+
+    input{
+        width: 100%;
+        text-align: left;
+        color: white;
+    }
+}

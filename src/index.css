@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("normalize.css");
+@import url("reset.css");
+
+html{
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+
+:root{
+    font-size: 16px;
+    --max-padding-x: 13.4375rem;
+    --min-padding-x: 1.25rem;   
+    --max-padding-y: 1.875rem;
+    --min-padding-y: 0.9375rem;
+    
+    --padding-x: clamp(var(--min-padding-x), -1.7969rem + 15.2344vw, var(--max-padding-x));
+    --padding-y: clamp(var(--min-padding-y), -1.7969rem + 15.2344vw, var(--max-padding-y));
+
+    --text-sm: clamp(0.75rem, 0.6875rem + 0.3125vw, 1rem);
+    --text-md: clamp(0.875rem, 0.6563rem + 1.0938vw, 1.75rem);
+    --text-l: clamp(0.875rem, 0.7188rem + 0.7813vw, 1.5rem);
+    --text-lg:  clamp(1.25rem, 0.4188rem + 3.7813vw, 3.25rem);
+    --text-xl: clamp(1.25rem, 0.8438rem + 2.0313vw, 2.875rem);
+    --text-xs: clamp(0.75rem, 0.7188rem + 0.1563vw, 0.875rem);    
+}
